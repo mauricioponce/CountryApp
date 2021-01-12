@@ -17,4 +17,8 @@ class MyViewModel : ViewModel() {
         }
     }
 
+    fun doSomething() {
+
+    }
+
 }

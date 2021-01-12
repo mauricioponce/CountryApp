@@ -22,13 +22,15 @@ import timber.log.Timber
 */
 class MainActivity : AppCompatActivity() {
 
-    private val vm: MyViewModel by viewModels()
+    private val viewModel by viewModels<MyViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initLog()
+
+        viewModel.doSomething()
     }
 
     private fun initLog() {
