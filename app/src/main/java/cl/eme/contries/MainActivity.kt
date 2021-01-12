@@ -2,6 +2,8 @@ package cl.eme.contries
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.viewModels
+import timber.log.Timber
 
 /*
 [X] Modelo (data class)
@@ -15,10 +17,23 @@ import android.os.Bundle
 [ ] Fragmento de detalle (detail)
 [ ] Persistencia de datos locales (ROOM)
 [ ] Testing para la base de datos
+[ ] Intent implícito para compartir
+[ ] Scroll
 */
 class MainActivity : AppCompatActivity() {
+
+    private val vm: MyViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        initLog()
+    }
+
+    private fun initLog() {
+        if(BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
     }
 }
