@@ -16,12 +16,13 @@ import timber.log.Timber
 [X] RecyclerView + Adapter + ViewHolder
 [ ] Testing unitario para mappers
 [ ] Fragmento de detalle (detail)
+[ ] Intent implícito para compartir
 [ ] Persistencia de datos locales (ROOM)
 [ ] Testing para la base de datos
-[ ] Intent implícito para compartir
-[ ] Scroll
+
 
 TODO el nombre del paquete principal está equivocado
+TODO generar un problema en el código y volver a una versión anterior
 */
 class MainActivity : AppCompatActivity() {
 
