@@ -8,8 +8,8 @@ import timber.log.Timber
 /*
 [X] Modelo (data class)
 [X] Consumo API (retrofit)
-[ ] Repositorio
-[ ] ViewModel
+[X] Repositorio
+[X] ViewModel
 [ ] ViewBinding
 [ ] Fragmento de listado (listing)
 [ ] RecyclerView + Adapter + ViewHolder
@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         initLog()
-
-        viewModel.doSomething()
     }
 
     private fun initLog() {
