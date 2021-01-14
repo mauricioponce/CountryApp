@@ -42,7 +42,7 @@ class ListingFragment : Fragment() {
             vm.selected(it) //asignamos el seleccionado al viewmodel
 
             // abrimos el fragmento de detalle
-            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container, DetailFragment())?.commit()
+            activity?.supportFragmentManager?.beginTransaction()?.replace(R.id.main_container, DetailFragment())?.addToBackStack("detail")?.commit()
         })
 
         vm.countries().observe(viewLifecycleOwner, {
