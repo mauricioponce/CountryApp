@@ -23,9 +23,11 @@ class DetailFragment : Fragment() {
     ): View? {
         binding = FragmentDetailBinding.inflate(layoutInflater)
 
-        vm.selected().observe(viewLifecycleOwner,{
-            Timber.d("el pais en el detalle es $it")
-        } )
+        vm.getDetail().observe(viewLifecycleOwner, {
+            binding.tvName.text = it.name
+            binding.tvRegion.text = it.region
+            binding.tvSubRegion.text = it.subregion
+        })
 
         return binding.root
     }

@@ -14,7 +14,7 @@ import timber.log.Timber
 [X] ViewBinding
 [X] Fragmento de listado (listing)
 [X] RecyclerView + Adapter + ViewHolder
-[ ] Fragmento de detalle (detail)
+[X] Fragmento de detalle (detail)
 [ ] Testing unitario para mappers
 [ ] Intent implícito para compartir
 [ ] Persistencia de datos locales (ROOM)
