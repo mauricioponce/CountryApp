@@ -1,10 +1,8 @@
 package cl.eme.contries
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import cl.eme.contries.model.Repository
+import cl.eme.contries.model.mapperCountryDB2API
 import cl.eme.contries.model.pojos.Country
 import cl.eme.contries.model.pojos.CountryDetail
 import kotlinx.coroutines.launch
@@ -14,7 +12,10 @@ class MyViewModel : ViewModel() {
 
     private val repository = Repository()
 
-    private val countries = repository.countries
+    private val countries = Transformations.map(repository.countries) {
+        entities -> entities.map { mapperCountryDB2API(it) }
+
+    }
 
     private val selected = MutableLiveData<Country>()
 

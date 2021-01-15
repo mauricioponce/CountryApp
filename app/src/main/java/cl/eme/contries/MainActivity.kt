@@ -16,7 +16,7 @@ import timber.log.Timber
 [X] RecyclerView + Adapter + ViewHolder
 [X] Fragmento de detalle (detail)
 [ ] Testing unitario para mappers
-[ ] Intent implícito para compartir
+[X] Intent implícito para compartir
 [ ] Persistencia de datos locales (ROOM)
 [ ] Testing para la base de datos
 

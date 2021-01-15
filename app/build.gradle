@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -58,6 +59,12 @@ dependencies {
 
     // Viewmodel extension
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-rc01'
+
+    // Room components
+    def roomVersion="2.2.6"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
